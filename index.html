@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data</title>
+    <style>
+        body {
+            background-image: url('mental1.jpg'); /* Set the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the background image */
+            font-family: Arial, sans-serif; /* Set a default font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            height: 100vh; /* Set height to full viewport height */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .form-container {
+            width: 300px; /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+        /* Additional styling for form elements */
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="/submit_form" method="post">
+            <label for="disease">Disease:</label><br>
+            <input type="text" id="disease" name="disease"><br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="mood">Mood:</label><br>
+            <select id="mood" name="mood">
+                <option value="bad">Bad</option>
+                <option value="dull">Dull</option>
+                <option value="good">Good</option>
+                <option value="better">Better</option>
+            </select><br>
+
+            <label for="stress_level">Stress Level:</label><br>
+            <select id="stress_level" name="stress_level">
+                <option value="low">Low</option>
+                <option value="normal">Normal</option>
+                <option value="high">High</option>
+            </select><br>
+
+            <label for="sleep_pattern">Sleep Pattern:</label><br>
+            <select id="sleep_pattern" name="sleep_pattern">
+                <option value="less than 2hrs">Less Than 2hrs</option>
+                <option value="2hrs">2hrs</option>
+                <option value="3hrs">3hrs</option>
+                <option value="4hrs">4hrs</option>
+                <option value="5hrs">5hrs</option>
+                <option value="6hrs">6hrs</option>
+                <option value="7hrs">7hrs</option>
+                <option value="8hrs">8hrs</option>
+                <option value="more than 8hrs">More Than 8hrs</option>
+            </select><br>
+
+            <label for="other_indicator">Other Indicators:</label><br>
+            <input type="text" id="other_indicator" name="other_indicator"><br>
+
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="assigned_doctor_id">Assigned Doctor ID:</label><br>
+            <select id="assigned_doctor_id" name="assigned_doctor_id">
+                <option value="d1">D1</option>
+                <option value="d2">D2</option>
+                <option value="d3">D3</option>
+                <option value="d4">D4</option>
+                <option value="d5">D5</option>
+            </select><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
